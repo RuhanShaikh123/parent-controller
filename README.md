@@ -1,265 +1,131 @@
-# 🛡️ Parent Controller
+# 🛡️ ParentGuard – Parental Control Application
 
-![Flutter](https://img.shields.io/badge/Flutter-3.x-blue?logo=flutter)
-![Dart](https://img.shields.io/badge/Dart-3.x-blue?logo=dart)
-![Firebase](https://img.shields.io/badge/Firebase-Backend-orange?logo=firebase)
-![Riverpod](https://img.shields.io/badge/Riverpod-State%20Management-green)
-![GoRouter](https://img.shields.io/badge/GoRouter-Navigation-blue)
-![Platform](https://img.shields.io/badge/Platform-Android-success)
-![Status](https://img.shields.io/badge/Status-Active%20Development-yellow)
-![License](https://img.shields.io/badge/License-MIT-lightgrey)
-A modern Flutter-based parental control application built with a scalable Feature-First architecture. The application enables parents to securely connect with a child's device, monitor its status, track live location, and control supported features through Firebase and real-time communication.
+**Flutter | Dart | Firebase | Riverpod | WebSockets | Android Native**
 
-> **Status:** 🚧 Active Development
+ParentGuard is a Flutter-based parental control application designed to help parents securely connect with and monitor their children's devices through real-time communication.
 
----
+The project demonstrates my experience building cross-platform mobile applications, integrating Firebase services, implementing real-time communication, managing application state, and working with Android platform-level functionality.
 
-# ✨ Features
+> **📌 Important – Public Repository Notice**
+>
+> This repository is a **public showcase/demo version** of ParentGuard. It does not contain the complete application source code.
+>
+> Some implementation files, advanced features, backend components, and internal configurations have intentionally not been published. The repository provides selected code and project structure to demonstrate the technologies, architecture, and development approach used in the project.
+>
+> The complete application is larger than the publicly available code in this repository.
 
-## 🔐 Authentication
-- Login & Registration
-- Firebase Authentication
-- Persistent Login Session
+## ✨ Project Overview
 
----
+ParentGuard consists of a parent application and a child-side application that communicate through Firebase and real-time communication services.
 
-## 👨‍👧 Parent Dashboard
+The system is designed around device pairing, real-time status synchronization, location tracking, and remote monitoring capabilities.
 
-- Child Online / Offline Status
-- Child Information
-- Dashboard Statistics
-- Quick Action Cards
-- Recent Activity
-- Modern Material UI
+### Key Features
 
----
+- **Authentication:** Firebase Authentication with persistent login sessions.
+- **Parent Dashboard:** Child device status, device information, and dashboard statistics.
+- **Device Pairing:** Secure pairing using pairing codes and QR codes.
+- **Live Location:** Real-time location tracking and address resolution.
+- **Live Audio:** Low-latency audio communication using WebSockets.
+- **Permission Monitoring:** Monitoring important Android permissions and access settings.
+- **Device Communication:** Real-time synchronization between connected devices.
 
-## 🔗 Child Pairing
+## 🏗️ Architecture
 
-- Pair Code
-- QR Code Pairing
-- Secure Firebase Pairing
-- Real-Time Device Connection
+The Flutter application follows a Feature-First architecture with separation of responsibilities.
 
----
-
-## 📍 Live Location
-
-- Real-Time Location Tracking
-- Address Resolution
-- Firestore Synchronization
-- Google Maps Ready
-
----
-
-## 🎤 Live Microphone
-
-- Low Latency Audio Streaming
-- WebSocket Communication
-- Background Audio Support
-- Render Hosted WebSocket Server
-
----
-
-## 🔒 Permission Monitoring
-
-Monitor Child Permissions
-
-- Camera
-- Microphone
-- Location
-- Accessibility
-- Notification Access
-- Usage Access
-- Overlay Permission
-- Battery Optimization
-
----
-
-## ⚙️ Settings
-
-- Logout
-- Account Information
-- Device Management
-
----
-
-# 🏗️ Project Architecture
-
-The project follows a scalable **Feature-First Clean Architecture**.
-
-```
-lib
+```text
+lib/
 │
-├── apk
+├── apk/
 │
-├── features
-│   │
-│   ├── auth
-│   ├── onboarding
-│   ├── parent
-│   ├── child
-│   ├── pairing
-│   ├── location
-│   ├── live_audio
-│   ├── live_camera
-│   └── settings
+├── features/
+│   ├── auth/
+│   ├── onboarding/
+│   ├── parent/
+│   ├── child/
+│   ├── pairing/
+│   ├── location/
+│   ├── live_audio/
+│   ├── live_camera/
+│   └── settings/
 │
 └── main.dart
 ```
 
----
+### Feature Structure
 
-# 📂 Feature Structure
+Individual features are organized into separate layers:
 
-Every feature follows the same architecture for better scalability and maintainability.
-
-```
-feature_name
+```text
+feature_name/
 │
-├── data
-│     └── datasource
-│
-├── repository
-│     ├── repository.dart
-│     └── repository_provider.dart
-│
-├── providers
-│     └── state providers
-│
-├── presentation
-│     ├── screens
-│     └── widgets
-│
-└── service
-      └── feature_service.dart
+├── data/
+├── repository/
+├── providers/
+├── presentation/
+│   ├── screens/
+│   └── widgets/
+└── service/
 ```
 
-Example
+This structure helps maintain modularity, separation of concerns, and scalability.
 
-```
-live_audio
-│
-├── data
-│     └── live_audio_datasource.dart
-│
-├── repository
-│     ├── live_audio_repository.dart
-│     └── live_audio_repository_provider.dart
-│
-├── providers
-│     └── live_audio_provider.dart
-│
-├── presentation
-│     └── screens
-│           └── live_audio_screen.dart
-│
-└── service
-      └── parent_live_audio_service.dart
-```
+## 🧠 State Management
 
----
-
-# 🧠 State Management
-
-Riverpod
-
-- Provider
+- Riverpod
 - StateNotifierProvider
 - Repository Pattern
 - Dependency Injection
 - Reactive UI Updates
 
----
+## 🔥 Technology Stack
 
-# 🔥 Tech Stack
+| Category | Technologies |
+|---|---|
+| Framework | Flutter, Dart |
+| Backend | Firebase |
+| Authentication | Firebase Authentication |
+| Database | Cloud Firestore |
+| Storage | Firebase Storage |
+| State Management | Riverpod |
+| Navigation | GoRouter |
+| Real-Time Communication | WebSockets |
+| Location | Geolocator, Geocoding |
+| Android Development | Java, Native Android APIs |
+| Development Tools | Android Studio, Git, GitHub |
 
-### Framework
+## 📱 Application Modules
 
-- Flutter
-- Dart
+The project includes development work across multiple modules:
 
-### Backend
+- Parent application
+- Child application
+- Device pairing and synchronization
+- Location monitoring
+- Live audio communication
+- Permission monitoring
+- Remote device communication
 
-- Firebase Authentication
-- Cloud Firestore
-- Firebase Storage
+Some modules and their complete implementations are not included in this public repository.
 
-### State Management
+## 🚧 Development Status
 
-- Riverpod
+ParentGuard is an ongoing project. Development includes expanding monitoring capabilities, improving background operations, strengthening device communication, and refining the overall application experience.
 
-### Navigation
+Future development areas include:
 
-- GoRouter
+- WebRTC-based communication
+- Live camera streaming
+- Screen sharing
+- Device and application management
+- Usage statistics
+- Remote device commands
+- Background synchronization
 
-### Real-Time Communication
+## ⚙️ Running the Public Sample
 
-- WebSocket
-
-### Location
-
-- Geolocator
-- Geocoding
-
-### Development
-
-- Android Studio
-- Git
-- GitHub
-
----
-
-# 📸 Screenshots
-
-Coming Soon
-
-- Login
-- Register
-- Parent Dashboard
-- Pair Child
-- Live Location
-- Permission Status
-- Live Microphone
-
----
-
-# 🚀 Upcoming Features
-
-## Live Monitoring
-
-- Live Camera Streaming
-- Live Screen Sharing
-- WebRTC Integration
-
-## Device Management
-
-- Battery Percentage
-- Device Information
-- Installed Applications
-
-## Controls
-
-- App Blocking
-- Website Blocking
-- Screen Time Management
-- Remote Commands
-
-## Monitoring
-
-- Notification Monitoring
-- Activity Logs
-- Usage Statistics
-
-## Performance
-
-- Foreground Services
-- Background Synchronization
-- Push Notifications
-
----
-
-# ⚙️ Installation
+The repository contains selected project files for demonstration purposes.
 
 ```bash
 git clone https://github.com/RuhanShaikh123/parent-controller.git
@@ -271,34 +137,24 @@ flutter pub get
 flutter run
 ```
 
----
+**Note:** The public repository may not run as a complete application without the unpublished source files, Firebase configuration, backend services, and other required components.
 
-# 📋 Requirements
+## 🔐 Privacy and Permissions
 
-- Flutter 3.x
-- Dart 3.x
-- Firebase Project
-- Android Studio
-- Android Device
+ParentGuard is intended for authorized parental monitoring.
 
----
+Features involving location, microphone, camera, and other device permissions require appropriate authorization and informed consent from the device user.
 
-# ⚠️ Disclaimer
-
-This application is intended for educational purposes and authorized parental monitoring.
-
-Location, microphone, camera, and other monitoring features require the appropriate permissions and the informed consent of the device user.
-
----
-
-# 👨‍💻 Author
+## 👨‍💻 Developer
 
 **Ruhan Shaikh**
 
-Flutter Developer
+Flutter Developer | Dart | Firebase | Riverpod | REST APIs
 
-GitHub:
-https://github.com/RuhanShaikh123
+- GitHub: https://github.com/RuhanShaikh123
+- LinkedIn: https://www.linkedin.com/in/ruhanshaikh-dev/
+- Email: shaikhruhan555@gmail.com
 
-Email:
-shaikhruhan555@gmail.com
+---
+
+*This repository represents selected work from a larger application developed as part of my mobile application development experience.*
