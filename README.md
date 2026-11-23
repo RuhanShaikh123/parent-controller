@@ -85,6 +85,42 @@ Monitoring of important Android permissions and system-level access:
 - Device management modules.
 - Support for additional monitoring capabilities.
 
+
+## 📲 7. Application Management & APK Blocking
+
+- Installed application discovery and listing.
+- Application usage monitoring.
+- Individual application usage information.
+- Remote application blocking and unblocking.
+- Application management through the parent application.
+- Android-level integration for application monitoring and control.
+
+## 📊 8. Application Usage Monitoring
+
+- Monitor installed application usage.
+- Track application activity and usage duration.
+- Retrieve application usage information through Android Usage Access.
+- Synchronize supported usage information with the parent application.
+- Present application activity information for parental supervision.
+
+## 📷 9. Remote Camera Access
+
+- Remote access to the child device camera, subject to permissions and authorization.
+- Front camera access.
+- Back camera access.
+- Camera switching between front and rear cameras.
+- Live camera streaming architecture.
+- Real-time communication between parent and child applications.
+
+## 🎥 10. Live Device Monitoring
+
+- Real-time device monitoring.
+- Live audio communication.
+- Remote camera monitoring.
+- Front and rear camera selection.
+- Device status synchronization.
+- Background service integration for supported monitoring operations.
+- 
 ---
 
 # 🏗️ Technical Architecture & Engineering
